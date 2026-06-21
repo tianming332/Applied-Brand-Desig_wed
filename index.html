@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>张子晗｜Brand Identity Portfolio 2023—2025</title>
+  <meta name="description" content="张子晗 2023—2025 实际落地品牌Logo与视觉识别系统作品集。Brand identity, logo design, visual system and application design portfolio." />
+  <link rel="icon" type="image/png" href="assets/tum-logo.png" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --paper: #ffffff;
+      --ink: #050505;
+      --muted: #686868;
+      --line: rgba(0, 0, 0, 0.10);
+      --line-strong: rgba(0, 0, 0, 0.18);
+      --accent: #111111;
+      --soft: #f6f6f6;
+      --soft-2: #eeeeee;
+      --shadow: 0 22px 60px rgba(0, 0, 0, 0.08);
+      --radius: 22px;
+      --radius-small: 14px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      background: #ffffff;
+      color: var(--ink);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 44px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brandmark {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .brandmark-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: #000;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      border: 1px solid #000;
+    }
+
+    .brandmark-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brandmark small {
+      display: block;
+      margin-top: -3px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    .navlinks a {
+      padding: 8px 0;
+      border-bottom: 1px solid transparent;
+      transition: 0.25s ease;
+    }
+
+    .navlinks a:hover {
+      color: var(--ink);
+      border-bottom-color: var(--ink);
+    }
+
+    .hero {
+      padding: 86px 0 64px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 88px);
+      line-height: 0.98;
+      letter-spacing: -0.07em;
+      font-weight: 800;
+      max-width: 760px;
+    }
+
+    .hero h1 span {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      background: none;
+      -webkit-background-clip: initial;
+      background-clip: initial;
+      font-weight: 650;
+      letter-spacing: -0.05em;
+    }
+
+    .lead {
+      margin-top: 28px;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .lead strong {
+      color: var(--ink);
+      font-weight: 650;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      font-size: 14px;
+      font-weight: 650;
+      transition: 0.25s ease;
+    }
+
+    .button.primary {
+      background: #000;
+      color: #ffffff;
+      border-color: #000;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.14);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 560px;
+      border-radius: var(--radius);
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .cover-mosaic {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 12px;
+      height: 100%;
+      min-height: 528px;
+    }
+
+    .mosaic-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      background: #f4f4f4;
+    }
+
+    .mosaic-item:first-child {
+      grid-row: span 2;
+    }
+
+    .mosaic-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.01);
+    }
+
+    .mosaic-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 42%, rgba(0, 0, 0, 0.38));
+      pointer-events: none;
+    }
+
+    .mosaic-label {
+      position: absolute;
+      left: 16px;
+      bottom: 14px;
+      right: 16px;
+      z-index: 2;
+      color: white;
+      font-size: 13px;
+      font-weight: 650;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.7fr) 1.3fr;
+      gap: 36px;
+      align-items: end;
+      margin-bottom: 36px;
+    }
+
+    .section-kicker {
+      color: var(--accent);
+      font-size: 13px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      font-weight: 750;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      max-width: 720px;
+      font-size: 16px;
+    }
+
+    .about-panel {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .panel {
+      background: #ffffff;
+      border: 1px solid rgba(29, 37, 33, 0.10);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: 0 12px 45px rgba(29, 37, 33, 0.07);
+    }
+
+    .profile-title {
+      font-size: 28px;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+
+    .profile-title span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    .profile-copy {
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-small);
+      padding: 16px;
+      background: var(--soft);
+    }
+
+    .stat b {
+      display: block;
+      font-size: 26px;
+      line-height: 1;
+      color: var(--accent);
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .skill-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .skill-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .skill-item:last-child {
+      border-bottom: 0;
+    }
+
+    .skill-item b {
+      font-size: 15px;
+    }
+
+    .skill-item span {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 420px;
+      border-radius: var(--radius);
+      background: #f4f4f4;
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+      transition: 0.28s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
+      transition: 0.5s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.045);
+    }
+
+    .project-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72));
+    }
+
+    .project-card-content {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      z-index: 2;
+      color: white;
+    }
+
+    .project-index {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .project-card h3 {
+      font-size: 24px;
+      line-height: 1.14;
+      letter-spacing: -0.02em;
+    }
+
+    .project-card p {
+      margin-top: 8px;
+      color: rgba(255,255,255,0.76);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.22);
+      font-size: 11px;
+      letter-spacing: 0.02em;
+    }
+
+    .case-list {
+      display: grid;
+      gap: 54px;
+    }
+
+    .case {
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: 28px;
+      align-items: center;
+      padding: 18px;
+      background: #ffffff;
+      border: 1px solid rgba(29, 37, 33, 0.10);
+      border-radius: 34px;
+      box-shadow: 0 18px 55px rgba(29, 37, 33, 0.08);
+    }
+
+    .case:nth-child(even) {
+      grid-template-columns: 1.14fr 0.86fr;
+    }
+
+    .case:nth-child(even) .case-info {
+      order: 2;
+    }
+
+    .case:nth-child(even) .case-visual {
+      order: 1;
+    }
+
+    .case-info {
+      padding: 18px 18px 18px 22px;
+    }
+
+    .case-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 760;
+      margin-bottom: 18px;
+    }
+
+    .case h3 {
+      font-size: clamp(28px, 3.4vw, 48px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    .case h3 small {
+      display: block;
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 650;
+    }
+
+    .case-desc {
+      color: var(--muted);
+      margin-top: 18px;
+    }
+
+    .case-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .point {
+      padding: 14px;
+      border-radius: var(--radius-small);
+      background: var(--soft);
+      border: 1px solid var(--line);
+    }
+
+    .point b {
+      display: block;
+      font-size: 13px;
+    }
+
+    .point span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .case-visual {
+      overflow: hidden;
+      border-radius: 24px;
+      background: #f4f4f4;
+      aspect-ratio: 4 / 5;
+      cursor: zoom-in;
+    }
+
+    .case-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.35s ease;
+    }
+
+    .case-visual:hover img {
+      transform: scale(1.025);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .process-card {
+      padding: 24px;
+      min-height: 220px;
+      border-radius: var(--radius);
+      background: #ffffff;
+      border: 1px solid var(--line);
+    }
+
+    .process-card span {
+      display: inline-grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      font-weight: 750;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .process-card h3 {
+      font-size: 18px;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer {
+      padding: 80px 0 38px;
+      background: #000000;
+      color: #ffffff;
+      margin-top: 50px;
+    }
+
+    .footer-panel {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 36px;
+      align-items: end;
+      padding-bottom: 46px;
+      border-bottom: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .footer h2 {
+      color: white;
+      max-width: 720px;
+    }
+
+    .footer p {
+      color: rgba(255,255,255,0.68);
+      margin-top: 16px;
+      max-width: 700px;
+    }
+
+    .contact-box {
+      justify-self: end;
+      width: min(100%, 360px);
+      padding: 24px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .contact-box small {
+      display: block;
+      color: rgba(255,255,255,0.58);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+    }
+
+    .contact-box a {
+      display: block;
+      font-size: 17px;
+      font-weight: 650;
+      word-break: break-all;
+    }
+
+    .copyright {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding-top: 26px;
+      color: rgba(255,255,255,0.58);
+      font-size: 12px;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 26px;
+      background: rgba(8, 11, 10, 0.82);
+      backdrop-filter: blur(10px);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: min(1100px, 94vw);
+      max-height: 88vh;
+      border-radius: 18px;
+      box-shadow: 0 30px 120px rgba(0,0,0,0.5);
+    }
+
+    .lightbox button {
+      position: absolute;
+      top: 22px;
+      right: 24px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.24);
+      background: rgba(255,255,255,0.12);
+      color: white;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+
+
+    .brandmark:hover .brandmark-icon {
+      transform: translateY(-1px);
+    }
+
+    .brandmark-icon {
+      transition: 0.22s ease;
+    }
+
+    .topbar .container {
+      max-width: 1240px;
+    }
+
+    .hero {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      grid-template-columns: 0.95fr 1.05fr;
+    }
+
+    .hero-card {
+      box-shadow: none;
+    }
+
+    .panel,
+    .case,
+    .process-card,
+    .contact-box {
+      box-shadow: none;
+    }
+
+    .project-card {
+      box-shadow: none;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.12);
+    }
+
+    .footer .section-kicker {
+      color: rgba(255, 255, 255, 0.72) !important;
+    }
+
+
+
+    /* 2026-06 Update: black header + cleaner profile layout */
+    .topbar {
+      background: #000000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      backdrop-filter: none;
+    }
+
+    .topbar .brandmark,
+    .topbar .navlinks a {
+      color: #ffffff;
+    }
+
+    .topbar .brandmark small {
+      color: rgba(255, 255, 255, 0.64);
+    }
+
+    .topbar .navlinks {
+      color: rgba(255, 255, 255, 0.70);
+    }
+
+    .topbar .navlinks a {
+      color: rgba(255, 255, 255, 0.72);
+      border-bottom-color: transparent;
+    }
+
+    .topbar .navlinks a:hover {
+      color: #ffffff;
+      border-bottom-color: #ffffff;
+    }
+
+    .brandmark-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 0;
+      background: transparent;
+      border: 0;
+      overflow: visible;
+    }
+
+    .brandmark-icon img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .brandmark {
+      gap: 12px;
+    }
+
+    .about-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .about-panel .panel {
+      border-radius: 28px;
+      padding: 38px;
+      border: 1px solid rgba(0, 0, 0, 0.10);
+      background: #ffffff;
+    }
+
+    .profile-title {
+      font-size: clamp(30px, 3vw, 42px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      margin-bottom: 22px;
+    }
+
+    .profile-title span {
+      color: #111111;
+      font-size: 12px;
+      letter-spacing: 0.24em;
+      margin-top: 14px;
+    }
+
+    .profile-copy {
+      font-size: 15px;
+      line-height: 1.95;
+      color: #555555;
+      max-width: 680px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .stat {
+      min-height: 116px;
+      padding: 20px 18px;
+      border-radius: 18px;
+      background: #f7f7f7;
+      border: 1px solid rgba(0, 0, 0, 0.09);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stat b {
+      color: #000000;
+      font-size: clamp(25px, 2.4vw, 34px);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      white-space: normal;
+    }
+
+    .stat:nth-child(2) b {
+      font-size: clamp(25px, 2.1vw, 32px);
+    }
+
+    .stat span {
+      color: #555555;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      line-height: 1.35;
+      margin-top: 14px;
+    }
+
+    .skill-list {
+      gap: 0;
+    }
+
+    .skill-item {
+      display: grid;
+      grid-template-columns: 118px minmax(0, 1fr);
+      align-items: start;
+      gap: 24px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    }
+
+    .skill-item:first-child {
+      padding-top: 2px;
+    }
+
+    .skill-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 2px;
+    }
+
+    .skill-item b {
+      font-size: 16px;
+      line-height: 1.45;
+      color: #000000;
+      white-space: nowrap;
+    }
+
+    .skill-item span {
+      display: block;
+      width: 100%;
+      color: #444444;
+      font-size: 14px;
+      line-height: 1.65;
+      text-align: left;
+      overflow-wrap: anywhere;
+    }
+
+    .section#about {
+      background: #ffffff;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .section-head,
+      .about-panel,
+      .footer-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .hero-card {
+        min-height: 500px;
+      }
+
+      .project-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .case,
+      .case:nth-child(even) {
+        grid-template-columns: 1fr;
+      }
+
+      .case:nth-child(even) .case-info,
+      .case:nth-child(even) .case-visual {
+        order: initial;
+      }
+
+      .contact-box {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .nav {
+        height: auto;
+        min-height: 66px;
+      }
+
+      .navlinks {
+        display: none;
+      }
+
+      .hero-card {
+        min-height: 420px;
+      }
+
+      .cover-mosaic {
+        min-height: 392px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+
+      .mosaic-item:first-child {
+        grid-row: span 1;
+      }
+
+      .section {
+        padding: 56px 0;
+      }
+
+      .panel,
+      .case {
+        padding: 18px;
+        border-radius: 22px;
+      }
+
+      .stats,
+      .project-grid,
+      .process-grid,
+      .case-points {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card,
+      .project-card img {
+        min-height: 360px;
+      }
+
+      .footer {
+        padding-top: 58px;
+      }
+
+      .copyright {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="container nav" aria-label="主导航 Main navigation">
+      <a class="brandmark" href="https://tianming332.github.io/JiangmingTian_Portfolio_Final/" target="_blank" rel="noopener" aria-label="打开主作品集 Open main portfolio">
+        <span class="brandmark-icon"><img src="assets/tjm-logo-white.png" alt="TJM logo" /></span>
+        <span>张子晗<small>Brand Identity Portfolio</small></span>
+      </a>
+      <div class="navlinks">
+        <a href="#about">介绍 About</a>
+        <a href="#works">项目 Works</a>
+        <a href="#cases">详情 Cases</a>
+        <a href="#process">流程 Process</a>
+        <a href="#contact">联系 Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> 2023—2025 Actual Commercial Projects</div>
+          <h1>品牌标志设计<br><span>Logo & Visual Identity</span></h1>
+          <p class="lead">
+            本页整理了 <strong>6 个实际落地品牌设计全案</strong>，项目覆盖智慧社区、运动生活、生态检测、线缆科技、公共文旅与山野餐饮品牌。每个项目均围绕 Logo、标准色、字体、辅助图形、物料应用与环境导视形成完整视觉系统。<br>
+            This portfolio presents six implemented brand identity projects, from logo concept to full visual application system.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#works">查看项目 View Works</a>
+            <a class="button" href="#contact">联系我 Contact</a>
+            <a class="button" href="https://tianming332.github.io/JiangmingTian_Portfolio_Final/" target="_blank" rel="noopener">主作品集 Main Portfolio</a>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="品牌项目预览 Brand preview mosaic">
+          <div class="cover-mosaic">
+            <div class="mosaic-item">
+              <img src="assets/hangzhou-linxin.webp" alt="杭州邻芯品牌设计全案 Hangzhou Linxin brand identity" />
+              <span class="mosaic-label">Hangzhou Linxin / 智慧社区</span>
+            </div>
+            <div class="mosaic-item">
+              <img src="assets/lanyuan-cable.webp" alt="缆之源品牌设计全案 Lanyuan Cable brand identity" />
+              <span class="mosaic-label">Lanyuan Cable / 线缆科技</span>
+            </div>
+            <div class="mosaic-item">
+              <img src="assets/yanbowen-noodles.webp" alt="闫博文品牌设计全案 Yanbowen noodles brand identity" />
+              <span class="mosaic-label">Yanbowen / 山野餐饮</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Profile / 个人介绍</div>
+            <h2>以品牌视觉为核心，连接设计、商业与 AI 工具。</h2>
+          </div>
+          <p>
+            I focus on visual communication, brand identity and digital experience. My practice combines traditional design skills with AI-assisted workflows, turning abstract brand positioning into clear and usable visual systems.
+          </p>
+        </div>
+
+        <div class="about-panel">
+          <div class="panel">
+            <h3 class="profile-title">张子晗 Zhang Zihan<span>Visual Designer / Brand Identity Designer</span></h3>
+            <p class="profile-copy">
+              本科阶段学习视觉传达设计，长期进行平面设计、品牌视觉、海报宣发、影像记录与新媒体内容制作。研究生阶段在日本攻读人工智能相关专业，持续学习机器学习、数据分析、自然语言处理与 AI 软件应用。设计方向上，希望将视觉传达、品牌设计、界面设计与 AI 工具结合，形成更高效、更具探索性的设计工作流。
+            </p>
+            <p class="profile-copy">
+              I use brand design as a way to organize information, express emotion and create recognizable systems. My goal is to build visual experiences that are attractive, understandable and ready for real-world use.
+            </p>
+            <div class="stats">
+              <div class="stat"><b>6</b><span>Logo Projects</span></div>
+              <div class="stat"><b>2023<br>—2025</b><span>Project Period</span></div>
+              <div class="stat"><b>100%</b><span>Independent Work</span></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="skill-list">
+              <div class="skill-item"><b>设计方向</b><span>Logo / VI / Poster / Signage</span></div>
+              <div class="skill-item"><b>核心能力</b><span>品牌概念、图形归纳、版式系统、色彩控制</span></div>
+              <div class="skill-item"><b>软件工具</b><span>Photoshop / Illustrator / InDesign / Lightroom</span></div>
+              <div class="skill-item"><b>AI 工作流</b><span>ComfyUI / Stable Diffusion / LLM Assisted Design</span></div>
+              <div class="skill-item"><b>语言能力</b><span>Chinese / Japanese N1 / English</span></div>
+              <div class="skill-item"><b>作品定位</b><span>实际项目落地展示 / Implemented brand cases</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="works">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Selected Works / 项目总览</div>
+            <h2>6 个实际落地 Logo 设计项目。</h2>
+          </div>
+          <p>
+            每个项目均由本人独立完成，包含品牌图形、标准字体、标准色、辅助图形、应用物料、海报系统与导视视觉展示。Each case includes logo system, color palette, typography, auxiliary graphics and application scenarios.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <a class="project-card" href="#case-01">
+            <img src="assets/hangzhou-linxin.webp" alt="杭州邻芯 Hangzhou Linxin" loading="lazy" />
+            <div class="project-card-content">
+              <span class="project-index">01</span>
+              <h3>杭州邻芯<br>Hangzhou Linxin</h3>
+              <p>智慧社区服务品牌 / Community life platform</p>
+              <div class="tag-row"><span class="tag">Community</span><span class="tag">Smart Life</span><span class="tag">Service</span></div>
+            </div>
+          </a>
+
+          <a class="project-card" href="#case-02">
+            <img src="assets/nanshan-wellness.webp" alt="南山运动生活馆 Nanshan Sports & Wellness" loading="lazy" />
+            <div class="project-card-content">
+              <span class="project-index">02</span>
+              <h3>南山运动生活馆<br>Nanshan Wellness</h3>
+              <p>运动健康生活方式品牌 / Sports & wellness identity</p>
+              <div class="tag-row"><span class="tag">Health</span><span class="tag">Balance</span><span class="tag">Nature</span></div>
+            </div>
+          </a>
+
+          <a class="project-card" href="#case-03">
+            <img src="assets/detection.webp" alt="蒂克森 Detection" loading="lazy" />
+            <div class="project-card-content">
+              <span class="project-index">03</span>
+              <h3>蒂克森<br>Detection</h3>
+              <p>生态环境检测品牌 / Ecological detection brand</p>
+              <div class="tag-row"><span class="tag">Ecology</span><span class="tag">Detection</span><span class="tag">Safety</span></div>
+            </div>
+          </a>
+
+          <a class="project-card" href="#case-04">
+            <img src="assets/lanyuan-cable.webp" alt="缆之源 Lanyuan Cable" loading="lazy" />
+            <div class="project-card-content">
+              <span class="project-index">04</span>
+              <h3>缆之源<br>Lanyuan Cable</h3>
+              <p>线缆科技制造品牌 / Cable technology identity</p>
+              <div class="tag-row"><span class="tag">Technology</span><span class="tag">Cable</span><span class="tag">Industry</span></div>
+            </div>
+          </a>
+
+          <a class="project-card" href="#case-05">
+            <img src="assets/hemei-tianyi.webp" alt="和美天一 He Mei Tian Yi" loading="lazy" />
+            <div class="project-card-content">
+              <span class="project-index">05</span>
+              <h3>和美天一<br>He Mei Tian Yi</h3>
+              <p>区域公共与滨海文旅品牌 / Public cultural tourism brand</p>
+              <div class="tag-row"><span class="tag">City</span><span class="tag">Culture</span><span class="tag">Tourism</span></div>
+            </div>
+          </a>
+
+          <a class="project-card" href="#case-06">
+            <img src="assets/yanbowen-noodles.webp" alt="闫博文山野菜杂面条 Yanbowen noodles" loading="lazy" />
+            <div class="project-card-content">
+              <span class="project-index">06</span>
+              <h3>闫博文<br>Yanbowen Noodles</h3>
+              <p>山野菜杂面条品牌 / Natural food brand</p>
+              <div class="tag-row"><span class="tag">Food</span><span class="tag">Natural</span><span class="tag">Craft</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Case Details / 项目详情</div>
+            <h2>从 Logo 概念到品牌系统落地。</h2>
+          </div>
+          <p>
+            The following sections present each brand project with concise bilingual descriptions. Click the images to preview a larger version.
+          </p>
+        </div>
+
+        <div class="case-list">
+          <article class="case" id="case-01">
+            <div class="case-info">
+              <div class="case-meta"><span class="dot"></span> 01 / Community Life Platform</div>
+              <h3>杭州邻芯<small>Hangzhou Linxin</small></h3>
+              <p class="case-desc">以“邻里关系、智慧科技、家园社区”为核心，将人与人之间的连接感转化为亲和、稳定、易传播的图形符号。The identity visualizes connection, trust and smart community service through a warm and structured visual system.</p>
+              <div class="case-points">
+                <div class="point"><b>项目类型</b><span>智慧社区服务品牌</span></div>
+                <div class="point"><b>视觉关键词</b><span>连接 / 智慧 / 共生 / 温暖</span></div>
+                <div class="point"><b>设计内容</b><span>Logo、VI、海报、导视、应用物料</span></div>
+                <div class="point"><b>Role</b><span>Independent Designer</span></div>
+              </div>
+            </div>
+            <button class="case-visual" type="button" data-full="assets/01_hangzhou_linxin.png" aria-label="查看杭州邻芯大图">
+              <img src="assets/hangzhou-linxin.webp" alt="杭州邻芯品牌设计展示" loading="lazy" />
+            </button>
+          </article>
+
+          <article class="case" id="case-02">
+            <div class="case-info">
+              <div class="case-meta"><span class="dot"></span> 02 / Sports & Wellness</div>
+              <h3>南山运动生活馆<small>Nanshan Sports & Wellness</small></h3>
+              <p class="case-desc">以运动、健康、平衡和自然共生为品牌核心，使用瑜伽姿态、叶片和山形元素，建立轻松、自然、舒展的健康生活视觉印象。The brand combines body movement, nature and mountain imagery to express a balanced wellness lifestyle.</p>
+              <div class="case-points">
+                <div class="point"><b>项目类型</b><span>运动健康生活方式品牌</span></div>
+                <div class="point"><b>视觉关键词</b><span>运动 / 健康 / 平衡 / 自然</span></div>
+                <div class="point"><b>设计内容</b><span>Logo、色彩、辅助图形、周边应用</span></div>
+                <div class="point"><b>Role</b><span>Independent Designer</span></div>
+              </div>
+            </div>
+            <button class="case-visual" type="button" data-full="assets/02_nanshan_wellness.png" aria-label="查看南山运动生活馆大图">
+              <img src="assets/nanshan-wellness.webp" alt="南山运动生活馆品牌设计展示" loading="lazy" />
+            </button>
+          </article>
+
+          <article class="case" id="case-03">
+            <div class="case-info">
+              <div class="case-meta"><span class="dot"></span> 03 / Ecological Detection</div>
+              <h3>蒂克森<small>Detection</small></h3>
+              <p class="case-desc">以盾牌、树叶、水滴与循环箭头构成品牌标志，突出“科技守护生态、检测成就未来”的行业属性。The visual identity communicates protection, nature, precision and cycle in an environmental monitoring context.</p>
+              <div class="case-points">
+                <div class="point"><b>项目类型</b><span>生态环境检测品牌</span></div>
+                <div class="point"><b>视觉关键词</b><span>守护 / 自然 / 精准 / 循环</span></div>
+                <div class="point"><b>设计内容</b><span>Logo、标准字体、车身、工服、物料</span></div>
+                <div class="point"><b>Role</b><span>Independent Designer</span></div>
+              </div>
+            </div>
+            <button class="case-visual" type="button" data-full="assets/03_detection.png" aria-label="查看蒂克森大图">
+              <img src="assets/detection.webp" alt="蒂克森品牌设计展示" loading="lazy" />
+            </button>
+          </article>
+
+          <article class="case" id="case-04">
+            <div class="case-info">
+              <div class="case-meta"><span class="dot"></span> 04 / Cable Technology</div>
+              <h3>缆之源<small>Lanyuan Cable</small></h3>
+              <p class="case-desc">品牌图形从 L、Y 字母与线缆连接中提炼，视觉系统强调科技蓝、工业品质与稳定传输感。The identity transforms cable flow, initials and connection into a clean industrial technology symbol.</p>
+              <div class="case-points">
+                <div class="point"><b>项目类型</b><span>线缆科技制造品牌</span></div>
+                <div class="point"><b>视觉关键词</b><span>连接 / 科技 / 安全 / 未来</span></div>
+                <div class="point"><b>设计内容</b><span>Logo、包装、工服、车辆、导视</span></div>
+                <div class="point"><b>Role</b><span>Independent Designer</span></div>
+              </div>
+            </div>
+            <button class="case-visual" type="button" data-full="assets/04_lanyuan_cable.png" aria-label="查看缆之源大图">
+              <img src="assets/lanyuan-cable.webp" alt="缆之源品牌设计展示" loading="lazy" />
+            </button>
+          </article>
+
+          <article class="case" id="case-05">
+            <div class="case-info">
+              <div class="case-meta"><span class="dot"></span> 05 / Public Culture & Tourism</div>
+              <h3>和美天一<small>He Mei Tian Yi</small></h3>
+              <p class="case-desc">以山海交汇、阳光海岸和公共品牌形象为视觉来源，建立开放、包容、明亮的区域品牌识别。The visual system uses sunrise, sea wave and regional landscape to create an inclusive public brand identity.</p>
+              <div class="case-points">
+                <div class="point"><b>项目类型</b><span>区域公共品牌 / 滨海文旅品牌</span></div>
+                <div class="point"><b>视觉关键词</b><span>山海 / 阳光 / 文化 / 共创</span></div>
+                <div class="point"><b>设计内容</b><span>Logo、海报、物料、公共导视</span></div>
+                <div class="point"><b>Role</b><span>Independent Designer</span></div>
+              </div>
+            </div>
+            <button class="case-visual" type="button" data-full="assets/05_hemei_tianyi.png" aria-label="查看和美天一大图">
+              <img src="assets/hemei-tianyi.webp" alt="和美天一品牌设计展示" loading="lazy" />
+            </button>
+          </article>
+
+          <article class="case" id="case-06">
+            <div class="case-info">
+              <div class="case-meta"><span class="dot"></span> 06 / Natural Food Brand</div>
+              <h3>闫博文<small>Yanbowen Noodles</small></h3>
+              <p class="case-desc">以“闫”字为视觉核心，融合山野植物与山水元素，突出山野食材、传统工艺与自然本味。The brand identity builds a natural food image through Chinese character design, mountain lines and botanical symbols.</p>
+              <div class="case-points">
+                <div class="point"><b>项目类型</b><span>山野菜杂面条品牌</span></div>
+                <div class="point"><b>视觉关键词</b><span>山野 / 自然 / 传统 / 安心</span></div>
+                <div class="point"><b>设计内容</b><span>Logo、包装、门店、服装、名片</span></div>
+                <div class="point"><b>Role</b><span>Independent Designer</span></div>
+              </div>
+            </div>
+            <button class="case-visual" type="button" data-full="assets/06_yanbowen_noodles.png" aria-label="查看闫博文大图">
+              <img src="assets/yanbowen-noodles.webp" alt="闫博文品牌设计展示" loading="lazy" />
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Design Process / 设计流程</div>
+            <h2>将品牌理念转化为可使用的视觉系统。</h2>
+          </div>
+          <p>
+            My workflow focuses on positioning, symbol extraction, system building and application verification. 设计不只停留在一个图形，而是形成可以被使用、传播和延展的完整系统。
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <span>01</span>
+            <h3>品牌定位<br>Brand Positioning</h3>
+            <p>梳理行业属性、目标用户与品牌气质，明确视觉表达方向。</p>
+          </div>
+          <div class="process-card">
+            <span>02</span>
+            <h3>图形提炼<br>Symbol Design</h3>
+            <p>从品牌名称、行业符号与文化意象中提炼 Logo 图形。</p>
+          </div>
+          <div class="process-card">
+            <span>03</span>
+            <h3>系统搭建<br>Visual System</h3>
+            <p>建立字体、标准色、辅助图形、版式与视觉应用规范。</p>
+          </div>
+          <div class="process-card">
+            <span>04</span>
+            <h3>场景落地<br>Application</h3>
+            <p>通过物料、海报、服装、导视和空间场景验证品牌识别度。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-panel">
+        <div>
+          <div class="section-kicker" style="color: rgba(255,255,255,0.76);">Contact / 联系方式</div>
+          <h2>Looking for visual design, brand identity or AI-assisted design opportunities.</h2>
+          <p>期待进入互联网、游戏、智能设备或数字内容相关企业，从事 UI/UX 设计、视觉设计、交互体验设计或品牌体验设计相关工作。</p>
+        </div>
+        <div class="contact-box">
+          <small>Email</small>
+          <a href="mailto:jiangmingtian332@gmail.com">jiangmingtian332@gmail.com</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>© 2025 Zhang Zihan. Brand Identity Portfolio.</span>
+        <span>Designed as a concise bilingual web portfolio.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" id="closeLightbox" aria-label="关闭预览 Close preview">×</button>
+    <img id="lightboxImage" src="" alt="项目大图预览 Project preview" />
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const closeLightbox = document.getElementById('closeLightbox');
+
+    document.querySelectorAll('[data-full]').forEach((item) => {
+      item.addEventListener('click', () => {
+        lightboxImage.src = item.dataset.full;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    function closePreview() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImage.src = '';
+    }
+
+    closeLightbox.addEventListener('click', closePreview);
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closePreview();
+    });
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closePreview();
+    });
+  </script>
+</body>
+</html>
