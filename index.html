@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>张子晗｜Brand Identity Portfolio 2023—2025</title>
-  <meta name="description" content="张子晗 2023—2025 实际落地品牌Logo与视觉识别系统作品集。Brand identity, logo design, visual system and application design portfolio." />
+  <title>田江明｜實際落地品牌項目 2023—2025</title>
+  <meta name="description" content="田江明 2023—2025 實際落地品牌 Logo 與視覺識別系統作品集。" />
   <link rel="icon" type="image/png" href="assets/tum-logo.png" />
   <style>
     :root {
@@ -1062,13 +1062,20 @@
       }
     }
   </style>
+  <style>
+    .portfolio-bridge{position:fixed;z-index:1000;left:18px;right:18px;bottom:16px;display:flex;align-items:center;justify-content:space-between;padding:10px 13px;color:#111;background:rgba(238,240,243,.72);border:1px solid rgba(255,255,255,.7);border-radius:13px;box-shadow:0 12px 38px rgba(0,0,0,.18),inset 0 0 24px rgba(255,255,255,.26);backdrop-filter:blur(19px) saturate(1.2);font-size:10px;letter-spacing:.04em}.portfolio-bridge>a{font-weight:700}.portfolio-bridge small{margin-left:5px;font-size:7px;letter-spacing:.13em}.portfolio-bridge nav{display:flex;gap:18px}.portfolio-bridge a:hover{text-decoration:underline}@media(max-width:640px){.portfolio-bridge{left:8px;right:8px;bottom:8px}.portfolio-bridge nav a:first-child{display:none}.portfolio-bridge small{display:none}}
+  </style>
 </head>
 <body>
+  <aside class="portfolio-bridge" aria-label="跨站導航">
+    <a data-site="main" href="https://tianming332.github.io/JiangmingTian_Portfolio_Final/">← 返回主站 <small>BACK TO MAIN</small></a>
+    <nav><a data-site="annual" href="https://tianming332.github.io/TianJiangming-s-portfolio/">年度作品集</a><a data-site="video" href="https://tianming332.github.io/Tian_vidos/">Tian_vidos</a></nav>
+  </aside>
   <header class="topbar">
     <nav class="container nav" aria-label="主导航 Main navigation">
-      <a class="brandmark" href="https://tianming332.github.io/JiangmingTian_Portfolio_Final/" target="_blank" rel="noopener" aria-label="打开主作品集 Open main portfolio">
+      <a class="brandmark" data-site="main" href="https://tianming332.github.io/JiangmingTian_Portfolio_Final/" aria-label="打開主作品集 Open main portfolio">
         <span class="brandmark-icon"><img src="assets/tjm-logo-white.png" alt="TJM logo" /></span>
-        <span>张子晗<small>Brand Identity Portfolio</small></span>
+        <span>田江明<small>Implemented Brand Portfolio</small></span>
       </a>
       <div class="navlinks">
         <a href="#about">介绍 About</a>
@@ -1093,7 +1100,7 @@
           <div class="hero-actions">
             <a class="button primary" href="#works">查看项目 View Works</a>
             <a class="button" href="#contact">联系我 Contact</a>
-            <a class="button" href="https://tianming332.github.io/JiangmingTian_Portfolio_Final/" target="_blank" rel="noopener">主作品集 Main Portfolio</a>
+            <a class="button" data-site="main" href="https://tianming332.github.io/JiangmingTian_Portfolio_Final/">主作品集 Main Portfolio</a>
           </div>
         </div>
 
@@ -1130,7 +1137,7 @@
 
         <div class="about-panel">
           <div class="panel">
-            <h3 class="profile-title">张子晗 Zhang Zihan<span>Visual Designer / Brand Identity Designer</span></h3>
+            <h3 class="profile-title">田江明 Jiangming Tian<span>Visual Designer / Brand Identity Designer</span></h3>
             <p class="profile-copy">
               本科阶段学习视觉传达设计，长期进行平面设计、品牌视觉、海报宣发、影像记录与新媒体内容制作。研究生阶段在日本攻读人工智能相关专业，持续学习机器学习、数据分析、自然语言处理与 AI 软件应用。设计方向上，希望将视觉传达、品牌设计、界面设计与 AI 工具结合，形成更高效、更具探索性的设计工作流。
             </p>
@@ -1404,7 +1411,7 @@
         </div>
       </div>
       <div class="copyright">
-        <span>© 2025 Zhang Zihan. Brand Identity Portfolio.</span>
+        <span>© 2025 Jiangming Tian. Brand Identity Portfolio.</span>
         <span>Designed as a concise bilingual web portfolio.</span>
       </div>
     </div>
@@ -1415,6 +1422,7 @@
     <img id="lightboxImage" src="" alt="项目大图预览 Project preview" />
   </div>
 
+  <script src="site-links.js"></script>
   <script>
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightboxImage');
